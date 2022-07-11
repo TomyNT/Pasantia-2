@@ -1,0 +1,25 @@
+import random
+def seguridad():
+    num1 = int(random.randrange(10))
+    num2 = int(random.randrange(10))
+    num3 = num1+num2
+    print("El resultado de",num1,"+",num2,"es:")
+    resul=int(input())
+    if resul==num3:
+        print("Los resultados coinciden")
+    else: 
+        print("El numero ingresado no es valido")
+def inicio():
+    nom=(input("Ingrese su nombre: "))
+    ape=(input("Ingrese su apellido: "))
+    edad=(input("Ingrese su edad: "))
+    cel=(input("Ingrese su numero de celular: "))
+    mail=(input("Ingrese su dirección de correo electronico: "))
+    dom=(input("Ingrese su domicilio: "))
+    msg=str(input("Puede ingresar un mensaje si usted lo desea, de lo contrario, no escribir nada: "))[:500]
+    
+    if msg=="":
+       msg="El usuario no ha dejado ningún mensaje. "
+    seguridad()
+    print("Los datos que ustded ingresó fueron:",nom,ape,"edad:",edad," numero de celular:",cel,"dirección de correo electronico:",mail,"domicilio:",dom,"y su mensaje fue:",msg)
+inicio()
